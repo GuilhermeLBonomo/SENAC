@@ -1,6 +1,6 @@
-# !bin/bash
-from os import system
+from os import system, getlogin
 from sys import platform
+from time import sleep
 
 
 class Shutdown:
@@ -22,4 +22,6 @@ class Shutdown:
 
 
 if __name__ == "__main__":
+    print(f"bye {getlogin()}!")
+    sleep(2)
     s = Shutdown()
