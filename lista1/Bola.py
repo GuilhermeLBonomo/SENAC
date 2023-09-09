@@ -1,7 +1,9 @@
-from sys import exception
+#! /home/gui/pyenvs/main/bin/python
 
 
 class Bola:
+    """Classe que representa uma bola tendo cor, circunferência e material como atributos."""
+
     def __init__(self, color, circunference: float, material: str) -> None:
         self.__color = color.capitalize()
         self.__circunference = circunference
@@ -36,7 +38,7 @@ class Bola:
             value = value.replace(",", ".")
         try:
             self.__circunference = float(value)
-        except:
+        except TypeError:
             raise ValueError
 
     @property
@@ -50,4 +52,6 @@ class Bola:
 
 if __name__ == "__main__":
     b = Bola("Black", 2.781, "ferro")
+    print(b)
+    b.circunference = 30
     print(b)
