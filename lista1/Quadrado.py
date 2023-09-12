@@ -6,8 +6,7 @@ class Quadrado:
     """Classe que representa um  quadrado tendo um tamanho do lado e a sua área como atributos."""
 
     def __init__(self, lado_inicial: float) -> None:
-        self.__lado = 0
-        self.lado = lado_inicial
+        self.__lado = lado_inicial
         self.__area = self.calcular_area()
 
     def calcular_area(self) -> float:
@@ -20,13 +19,13 @@ class Quadrado:
 
     @lado.setter
     def lado(self, lado: float) -> None:
-        new_lado = 0
+        new_lado = 0.0
         try:
             new_lado = float(lado)
-        except TypeError:
+        except TypeError as e:
             raise TypeError(
                 f'Erro: o valor "{lado}" precisa ser um número real positivo, maior que 0.'
-            )
+            ) from e
         if new_lado <= 0:
             raise ValueError(
                 f'Erro: o valor "{lado}" precisa ser um número real positivo, maior que 0.'

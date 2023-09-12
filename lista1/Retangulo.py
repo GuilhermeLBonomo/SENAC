@@ -2,9 +2,8 @@
 
 
 class Retangulo:
-
     def __init__(self, ladoA: float, ladoB: float) -> None:
-        self.__lados = [0, 0]  # 0 = Base; 1 = Altura
+        self.__lados = [0.0, 0.0]  # 0 = Base; 1 = Altura
         self.mudar_lado(ladoA)
         self.mudar_lado(ladoB, False)
         self.__area = self.calcular_area()
@@ -26,10 +25,10 @@ class Retangulo:
         base_ou_altura = 0 if mudar_base else 1
         try:
             lado_novo = float(novo_lado)
-        except TypeError:
+        except TypeError as e:
             raise TypeError(
                 f'Erro: o valor "{lado}" precisa ser um número real positivo, maior que 0.'
-            )
+            ) from e
         if lado_novo <= 0:
             raise ValueError(
                 f'Erro: o valor "{lado}" precisa ser um número real positivo, maior que 0.'
@@ -50,7 +49,7 @@ if __name__ == "__main__":
     x = input("Infome a medida da largura (sem as unidades)")
     y = input("Infome a medida do comprimento (sem as unidades)")
     unidade = input("Informe as unidades usadas: \n[m, cm]")
-    print('\n\n')
+    print("\n\n")
     r1 = Retangulo(x, y)
     print(
         f"Considerando pisos de 1{unidade}:1{unidade}, serão necessários: {r1.area:.3f}{unidade}² de piso."
