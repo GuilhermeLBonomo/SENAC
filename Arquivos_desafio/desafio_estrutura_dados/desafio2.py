@@ -2,7 +2,7 @@ from re import search
 from pathlib import Path
 from datetime import datetime
 
-path_alvo: Path = Path(__file__).resolve().parent / "desafio_estrutura_dados/main.py"
+path_alvo: Path = Path(__file__).resolve().parent / "main.py"
 
 
 def atualizar_path_alvo() -> None:
