@@ -25,49 +25,49 @@ class NodoArvore:
     def right(self, node) -> None:
         self._right = node
 
-    def add(self, value, side="left") -> None:
-        new_node = NodoArvore(value)
-        if side == "left":
-            self.left = new_node
-        elif side == "right":
-            self.right = new_node
-
-    def remove(self, side="left") -> None:
-        if side == "left":
-            self.left = None
-        elif side == "right":
-            self.right = None
-
-    def insert(self, value: int, side: str = "left") -> None:
-        if side not in ["left", "right"]:
-            raise ValueError("O lado deve ser 'left' ou 'right'")
-        new_node: "NodoArvore" = NodoArvore(value)
-        if side == "left":
-            self.left = new_node
+    def add(self, value) -> None:
+        if value < self.value:
+            if self.left is None:
+                self.left = NodoArvore(value)
+            else:
+                self.left.add(value)
         else:
-            self.right = new_node
+            if self.right is None:
+                self.right = NodoArvore(value)
+            else:
+                self.right.add(value)
 
-    def find_min(self):
-        current = self
-        while current.left is not None:
-            current = current.left
-        return current.value
+    def remove(self, value) -> None:
+        if value < self.value:
+            if self.left is not None:
+                self.left = self.left.remove(value)
+        elif value > self.value:
+            if self.right is not None:
+                self.right = self.right.remove(value)
+        else:
+            if self.left is None:
+                return self.right
+            elif self.right is None:
+                return self.left
+            min_value = self.right.find_min_or_max()
+            self.value = min_value
+            self.right = self.right.remove(min_value)
 
-    def find_max(self):
-        current = self
-        while current.right is not None:
-            current = current.right
+    def find_min_or_max(self, maximo=False):
+        current: NodoArvore = self
+        while (not maximo and current.left) or (maximo and current.right):
+            current = current.left if not maximo else current.right
         return current.value
 
     def is_identical(self, other) -> bool:
         if self is None and other is None:
             return True
         elif self is not None and other is not None:
-            values_are_equal = self.value == other.value
-            left_is_identical = (
+            values_are_equal: bool = self.value == other.value
+            left_is_identical: bool = (
                 self.left.is_identical(other.left) if self.left and other.left else True
             )
-            right_is_identical = (
+            right_is_identical: bool = (
                 self.right.is_identical(other.right)
                 if self.right and other.right
                 else True
@@ -79,23 +79,22 @@ class NodoArvore:
         if self is None:
             return 0
         else:
-            left_height = self.left.calculate_height() if self.left else 0
-            right_height = self.right.calculate_height() if self.right else 0
+            left_height: int = self.left.calculate_height() if self.left else 0
+            right_height: int = self.right.calculate_height() if self.right else 0
             return max(left_height, right_height) + 1
 
     def is_balanced(self) -> bool:
-        def check_balance(node):
+        def check_balance(node) -> tuple[bool, int]:
             if node is None:
                 return True, 0
             left_balanced, left_height = check_balance(node.left)
             right_balanced, right_height = check_balance(node.right)
-            balanced = (
+            balanced: bool = (
                 left_balanced
                 and right_balanced
                 and abs(left_height - right_height) <= 1
             )
-            height = max(left_height, right_height) + 1
-
+            height: int = max(left_height, right_height) + 1
             return balanced, height
 
         balanced, _ = check_balance(self)
@@ -105,7 +104,7 @@ class NodoArvore:
         def is_mirror(node1, node2):
             if node1 is None and node2 is None:
                 return True
-            if node1 is not None and node2 is not None:
+            elif node1 is not None and node2 is not None:
                 return (
                     node1.value == node2.value
                     and is_mirror(node1.left, node2.right)
