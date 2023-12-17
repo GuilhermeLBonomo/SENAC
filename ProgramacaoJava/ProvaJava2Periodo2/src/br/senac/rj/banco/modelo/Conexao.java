@@ -12,7 +12,7 @@ public final class Conexao {
 		try {
 			final String DRIVER = "org.mariadb.jdbc.Driver";
 			final String URL = "jdbc:mariadb://localhost:3306/Producao";
-			final String USER = "ProvaReinaldo";
+			final String USER = "ProvaReinaldo"; //Usuario do banco de dados que só tem acesso ao Banco Producao e que já foi excluido após a prova
 			final String PASSWORD = "Reinaldo123";
 			/*final String DRIVER = "com.mysql.cj.jdbc.Driver";
 			final String URL = "jdbc:mysql://localhost/teste1";
