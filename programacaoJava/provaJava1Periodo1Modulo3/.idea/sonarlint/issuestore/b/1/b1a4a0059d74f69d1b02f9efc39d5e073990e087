@@ -1,0 +1,27 @@
+
+¡
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(‚»Ä±ÿÿÿÿÿ8ùÆáû÷1J$8fb08265-48db-4ba4-b5b9-8309bae33d94
+µ
+java:S1319"mThe return type of this method should be an interface such as "Set" rather than the implementation "HashSet".(ŞÅäÿÿÿÿÿ8ÆËÌø1J$b03eb972-77c0-4dc0-803e-bda43d9858b9
+»
+java:S1319"sThe type of "disciplinasMinistradas" should be an interface such as "Set" rather than the implementation "HashSet".(¦²Ïûÿÿÿÿ8ËËÌø1J$008eca80-ac6a-4b04-8f14-d266c5d2e0ce
+»
+java:S13197"sThe type of "disciplinasMinistradas" should be an interface such as "Set" rather than the implementation "HashSet".(æ³ıÿÿÿÿ8ÏËÌø1J$4fcaf1c4-bbc0-4abe-9646-40f83b58f70b
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ää‘›şÿÿÿÿ8€Çáû÷1J$760e4db9-8094-4e91-99af-1fd8ec8ab0ab
+™
+java:S3457
+"Q%n should be used in place of \n to produce the platform-specific line separator.(Óùè›ùÿÿÿÿ8øÍÌø1J$7ce3c05a-3551-4281-b28b-55b0371bcd96
+r	java:S106
+"+Replace this use of System.out by a logger.(Óùè›ùÿÿÿÿ8×åóŒø1J$7fd4c5ac-0830-4160-86b0-28ec6a08b187
+™
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(€ĞŠ´úÿÿÿÿ8†ÎÌø1J$a66250fe-1bf9-4bd6-ae0d-1481561b2377
+r	java:S106"+Replace this use of System.out by a logger.(€ĞŠ´úÿÿÿÿ8ÙåóŒø1J$43552d75-b356-4dfd-99db-f6a94a527d3b
+™
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(÷Œïûÿÿÿÿ8’ÎÌø1J$cd55d5b7-0d9e-44c9-b13a-cf42dbf8d24a
+r	java:S106"+Replace this use of System.out by a logger.(÷Œïûÿÿÿÿ8ÛåóŒø1J$501928d0-0e34-40ae-a19e-9122e5e71aad
+”
+java:S3457$"Q%n should be used in place of \n to produce the platform-specific line separator.(Ã™‹8³ÎÌø1J$1fd5b510-ef71-4bac-9608-b375004fd41c
+m	java:S106$"+Replace this use of System.out by a logger.(Ã™‹8âåóŒø1J$0282159e-3558-466e-9484-5e355d3c4efa
+”
+java:S3457&"Q%n should be used in place of \n to produce the platform-specific line separator.(ÑÊò†8ºÎÌø1J$74bc19d7-eaa5-4748-b34e-4928e4db1984
+m	java:S106&"+Replace this use of System.err by a logger.(ÑÊò†8ãåóŒø1J$b3f9a3ce-f681-4146-863b-363af1b62d52

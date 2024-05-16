@@ -1,0 +1,28 @@
+
+›
+java:S2293	"YReplace the type specification in this constructor call with the diamond operator ("<>").(®ü÷8Ô›ÿŒø1J$4dd57c25-746a-46e1-b6e0-8c7fc5e21220
+°
+java:S1319"mThe return type of this method should be an interface such as "Set" rather than the implementation "HashSet".(Óô³ë8çİÌø1J$86902791-c480-44f8-9b6c-6be5b5517b11
+ª
+java:S1319!"hThe type of "disciplinas" should be an interface such as "Set" rather than the implementation "HashSet".(¾íê'8èİÌø1J$fff30bda-d2ec-4542-b989-1baf66e78ece
+°
+java:S1319;"hThe type of "disciplinas" should be an interface such as "Set" rather than the implementation "HashSet".(åğŞÏùÿÿÿÿ8éİÌø1J$563005bf-926c-47ca-9a30-e22eff0060b0
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ää‘›şÿÿÿÿ8Ö›ÿŒø1J$1c5e9528-91b8-405e-b9c6-012720680085
+
+java:S59938"9Change the visibility of this constructor to "protected".(æ¶æ²ÿÿÿÿÿ8Ú›ÿŒø1J$639e54f4-28b0-4166-9c20-e1c25523ac42
+
+java:S5993;"9Change the visibility of this constructor to "protected".(åğŞÏùÿÿÿÿ8Ú›ÿŒø1J$5e39a015-8a75-4b21-9a0f-0f014c98f060
+|
+java:S5993?"9Change the visibility of this constructor to "protected".(‘ôÓ¡8Ú›ÿŒø1J$6d5f0cc3-3b8f-447a-8829-040f91c011a8
+™
+java:S3457%"Q%n should be used in place of \n to produce the platform-specific line separator.(‹Ñúÿÿÿÿ8˜ŞÌø1J$7cf32f16-7324-403c-a836-4188ef23ffd5
+r	java:S106%"+Replace this use of System.out by a logger.(‹Ñúÿÿÿÿ8ß›ÿŒø1J$acf844de-62f1-48d5-8b98-28143f89bd7c
+™
+java:S3457+"Q%n should be used in place of \n to produce the platform-specific line separator.(‹Ñúÿÿÿÿ8ŞÌø1J$6d53e62b-2d8e-4dce-9264-33de5fa2e22c
+r	java:S106+"+Replace this use of System.out by a logger.(‹Ñúÿÿÿÿ8á›ÿŒø1J$0d82f666-19fc-4245-9ff2-0cd14a4e273c
+m
+java:S3457/"%String contains no format specifiers.(©ş÷ïÿÿÿÿÿ8â›ÿŒø1J$af14ebc9-e8bd-44e1-b15a-2df67642ba85
+r	java:S106/"+Replace this use of System.out by a logger.(©ş÷ïÿÿÿÿÿ8â›ÿŒø1J$65f83cd5-8df8-4fa4-b341-987299831827
+™
+java:S34574"Q%n should be used in place of \n to produce the platform-specific line separator.(Üúªıÿÿÿÿ8¨ŞÌø1J$6c9839f3-a7b0-4f7c-b827-7d54d11783d0
+r	java:S1064"+Replace this use of System.out by a logger.(Üúªıÿÿÿÿ8ã›ÿŒø1J$754f9d90-c133-4e17-a18d-f12853c9eea9
