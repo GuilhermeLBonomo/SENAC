@@ -1,0 +1,24 @@
+
+›
+java:S2293	"YReplace the type specification in this constructor call with the diamond operator ("<>").(®ü÷8ŠáĞû÷1J$b84db36c-9d50-41f7-b6c1-ee5cea3049ac
+°
+java:S1319"mThe return type of this method should be an interface such as "Set" rather than the implementation "HashSet".(Óô³ë8ŒáĞû÷1J$52b71e6b-28c5-47ed-826e-a179d085d5a2
+ª
+java:S1319("hThe type of "disciplinas" should be an interface such as "Set" rather than the implementation "HashSet".(¾íê'8áĞû÷1J$e1a8e804-4580-4eff-8149-a54d81bda5ef
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(îèÉÀ8áĞû÷1J$d10418f5-515d-4215-967e-8688efdff309
+
+java:S5993o"9Change the visibility of this constructor to "protected".(æ¶æ²ÿÿÿÿÿ8¥áĞû÷1J$a97dbecf-9d05-4deb-bd63-eb75ed095f49
+|
+java:S5993x"9Change the visibility of this constructor to "protected".(¼ÄÚÛ8¥áĞû÷1J$49adc91f-c5ad-4b49-acd8-11fa9c8c661b
+™
+java:S3457,"Q%n should be used in place of \n to produce the platform-specific line separator.(‹Ñúÿÿÿÿ8®áĞû÷1J$794fa829-5c1a-4ba4-9dd4-844dc13c70b1
+r	java:S106,"+Replace this use of System.out by a logger.(‹Ñúÿÿÿÿ8¯áĞû÷1J$92a3b7ae-6c43-4ef5-bfcb-d63aa47c5b50
+™
+java:S34572"Q%n should be used in place of \n to produce the platform-specific line separator.(‹Ñúÿÿÿÿ8±áĞû÷1J$78323f8f-a66f-4333-a531-1a92ce45d58d
+r	java:S1062"+Replace this use of System.out by a logger.(‹Ñúÿÿÿÿ8±áĞû÷1J$9c1dd4e3-32f9-426f-8ed5-c016dd4bb27e
+m
+java:S34576"%String contains no format specifiers.(©ş÷ïÿÿÿÿÿ8³áĞû÷1J$9ea59d77-49d1-4fcb-b019-ae75afdf09b1
+r	java:S1066"+Replace this use of System.out by a logger.(©ş÷ïÿÿÿÿÿ8³áĞû÷1J$898f3bd3-2126-44ce-aca4-8eaf0d90593b
+™
+java:S3457;"Q%n should be used in place of \n to produce the platform-specific line separator.(Üúªıÿÿÿÿ8´áĞû÷1J$1ff291c1-980f-4fde-99d6-21d15f454b74
+r	java:S106;"+Replace this use of System.out by a logger.(Üúªıÿÿÿÿ8´áĞû÷1J$78e24e80-229e-4cd5-a5d0-49921615063c
