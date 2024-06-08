@@ -19,7 +19,7 @@ public class Cliente {
                 try {
                     porta = Integer.parseInt(args[1]);
                 } catch (NumberFormatException e) {
-                    System.err.println("Porta inválida. Usando a porta padrão: " + PORTA_PADRAO);
+                    System.err.printf("Porta inválida. Usando a porta padrão: %d", PORTA_PADRAO);
                 }
             }
         }
@@ -30,14 +30,11 @@ public class Cliente {
         try (Socket clientSocket = new Socket(host, porta)) {
             System.out.println("Cliente conectado ao servidor!");
 
-            // Gera um identificador único para o cliente
             String clientId = UUID.randomUUID().toString();
 
-            // Envia o identificador para o servidor
             PrintStream output = new PrintStream(clientSocket.getOutputStream());
             output.println(clientId);
 
-            // Cria uma thread para receber mensagens do servidor
             new Thread(() -> {
                 try {
                     Scanner input = new Scanner(clientSocket.getInputStream());
@@ -46,18 +43,17 @@ public class Cliente {
                         System.out.println(message);
                     }
                 } catch (IOException e) {
-                    System.err.println("Erro na comunicação com o servidor: " + e.getMessage());
+                    System.err.printf("Erro na comunicação com o servidor: %s", e.getMessage());
                 }
             }).start();
 
-            // Agora o cliente pode enviar mensagens para o servidor
             Scanner scanner = new Scanner(System.in);
             while (true) {
                 String message = scanner.nextLine();
                 output.println(message);
             }
         } catch (IOException e) {
-            System.err.println("Erro ao conectar ao servidor: " + e.getMessage());
+            System.err.printf("Erro ao conectar ao servidor: %s", e.getMessage());
         }
     }
 }

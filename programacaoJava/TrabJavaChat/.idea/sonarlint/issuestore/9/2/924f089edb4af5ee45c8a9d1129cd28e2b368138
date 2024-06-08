@@ -1,0 +1,14 @@
+
+™
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(†¤ıÿÿÿÿ8ÚÓÑÏÿ1J$66ee3cfe-b6a3-448a-9869-4ad5d4d1d8d7
+k	java:S106"+Replace this use of System.err by a logger.(†¤ıÿÿÿÿJ$94cc4336-31ae-488a-a310-10ca3b45d274
+™
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(ß¹‘øÿÿÿÿ8ÁÑÏÿ1J$f8d89ca5-ae71-4203-8e26-7b582430b12b
+k	java:S106"+Replace this use of System.err by a logger.(ß¹‘øÿÿÿÿJ$06608c57-cfa7-4525-b1b2-6eedd31c9555
+z
+java:S1854!">Remove this useless assignment to local variable "clienteGUI".(¢«ÉJ$dab9ea77-0477-4b03-bce3-0c323f3b1fdc
+e	java:S106 "+Replace this use of System.out by a logger.(ä·ñJ$93dd1c2b-56be-4dd4-8ee2-3f2b9a36a159
+k
+java:S1481!"/Remove this unused "clienteGUI" local variable.(¢«ÉJ$b0f6bc3d-f3fc-42d1-9a05-4c56423ac32e
+p
+java:S1128"(Remove this unused import 'Net.Cliente'.(Ù˜‘ÿÿÿÿÿ8ü¡ÑÏÿ1J$930f50ee-9576-48b5-8396-cb7791113a5d

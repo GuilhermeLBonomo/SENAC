@@ -1,0 +1,20 @@
+
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÃîùÈ8à´ÊÏÿ1J$5f95765f-77ed-4998-bacc-81442bc1e201
+‡
+java:S2583&"DChange this condition so that it does not always evaluate to "false"(¯Î±8ô´ÊÏÿ1J$d5733956-f136-44a0-b636-7e957cbb6145
+p
+java:S1948".Make "clientSocket" transient or serializable.(ó’ª~8ú´ÊÏÿ1J$353e6644-50c0-4a12-b3a5-4a1ea838bdbb
+v
+java:S1948".Make "outputStream" transient or serializable.(»Ìãóûÿÿÿÿ8ú´ÊÏÿ1J$563a4151-e460-4f26-bbcc-41b3beebc272
+r	java:S106""+Replace this use of System.err by a logger.(åõ™Óùÿÿÿÿ8ş´ÊÏÿ1J$23c02028-9cbf-4d9c-bcf4-76f66df1ad25
+m	java:S106'"+Replace this use of System.err by a logger.(ù½ÔÄ8ÿ´ÊÏÿ1J$d2751b51-ed45-4c39-8ce6-840dcfb88842
+‘
+java:S32521"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(Õû»öşÿÿÿÿ8µÊÏÿ1J$ff1db98b-ff85-4127-bd67-a104dae1f633
+s
+java:S3457\"Q%n should be used in place of \n to produce the platform-specific line separator.(Ü¨·ùÿÿÿÿ8Ç“æÏÿ1
+r
+java:S1068"0Remove this unused "clientSocket" private field.(ó’ª~8ŠµÊÏÿ1J$cc2b83d6-0a47-4253-a804-589654cbf19e
+o
+java:S1068",Remove this unused "clientId" private field.(ÙÌ¨8ŠµÊÏÿ1J$863ccc36-f927-44e6-b260-a16be81dcc5a
+s
+java:S1068"0Remove this unused "firstMessage" private field.(ãµÚö8‹µÊÏÿ1J$6ddb1d10-7405-4257-aba6-3ebee103b2b1

@@ -13,18 +13,16 @@ public class Main {
             try {
                 new Servidor(PORTA);
             } catch (Exception e) {
-                System.err.println("Erro ao iniciar o servidor: " + e.getMessage());
+                System.err.printf("Erro ao iniciar o servidor: %s\n", e.getMessage());
                 System.exit(-1);
             }
         });
         serverThread.start();
-
-        // Aqui iniciamos a interface do cliente
         SwingUtilities.invokeLater(() -> {
             try {
                 iniciarInterfaceCliente("127.0.0.1", PORTA);
             } catch (IOException e) {
-                System.err.println("Erro ao iniciar a interface do cliente: " + e.getMessage());
+                System.err.printf("Erro ao iniciar a interface do cliente: %s\n", e.getMessage());
             }
         });
     }
@@ -32,8 +30,6 @@ public class Main {
     private static void iniciarInterfaceCliente(String host, int porta) throws IOException {
         Socket clientSocket = new Socket(host, porta);
         System.out.println("Cliente conectado ao servidor!");
-
-        // Inicializa a interface gráfica do cliente
         ClienteGUI clienteGUI = new ClienteGUI(clientSocket);
     }
 }
