@@ -1,17 +1,16 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÃîùÈ8œÚı€2J$3babd97b-1adf-472b-8985-25b13c5720ad
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÃîùÈ8ŠÍ€2J$4e324312-654d-49e1-81d8-eb44e8595e65
 ‡
-java:S2583)"DChange this condition so that it does not always evaluate to "false"(¯Î±8¯ô·ı€2J$73822638-c629-42e5-b94e-9eac8d763581
+java:S2583$"DChange this condition so that it does not always evaluate to "false"(¯Î±8¿££€2J$92ff1c56-b175-4c2f-8646-645dd86a3afa
 p
-java:S1948".Make "clientSocket" transient or serializable.(ó’ª~8ÃÜ“ı€2J$e58e6352-4105-4fe8-9e5f-f941c0dc852f
+java:S1948".Make "clientSocket" transient or serializable.(ó’ª~8Æ££€2J$f2ddce3d-cdad-4729-93f2-af57202e45be
 v
-java:S1948".Make "outputStream" transient or serializable.(»Ìãóûÿÿÿÿ8ÃÜ“ı€2J$18507500-73ae-4830-8f86-134b1dc51115
-r	java:S106%"+Replace this use of System.err by a logger.(åõ™Óùÿÿÿÿ8’â±ı€2J$2f765457-cf6d-459f-9e32-761c5d698d13
-m	java:S106*"+Replace this use of System.err by a logger.(ù½ÔÄ8·ô·ı€2J$d7aa4e9d-0ed0-4540-a64d-5950429a5133
+java:S1948".Make "outputStream" transient or serializable.(»Ìãóûÿÿÿÿ8È££€2J$87bbe344-f4ef-47a7-9f9f-6ab83f10d9fd
+b
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(è…¤ş8Óé£€2
+r	java:S106 "+Replace this use of System.err by a logger.(åõ™Óùÿÿÿÿ8Î££€2J$1d8a5972-a004-411c-b81d-1dc9f9275cbf
+m	java:S106%"+Replace this use of System.err by a logger.(ù½ÔÄ8Ï££€2J$63275007-4cd1-4b8b-aa43-c06cd66fe1dd
 ‘
-java:S32525"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(Õû»öşÿÿÿÿ8¸ô·ı€2J$ee5bd899-c430-4d9f-b294-093bdbac69e3
-n	java:S106‚"+Replace this use of System.err by a logger.(à™²8Áô·ı€2J$fe44e897-1fbf-40c1-a08a-84b13255fea1
+java:S3252/"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(Õû»öşÿÿÿÿ8Ï££€2J$ee9ebcbf-b0a6-4457-8aba-1ab56463489d
 r
-java:S1068"0Remove this unused "clientSocket" private field.(ó’ª~8ÎÜ“ı€2J$b0c8b3ec-2451-472e-94e5-ba6ffdb542da
-o
-java:S1068",Remove this unused "clientId" private field.(ÙÌ¨8ÎÜ“ı€2J$7601d752-6a89-4d1c-8983-7b4f4f13a422
+java:S1068"0Remove this unused "clientSocket" private field.(ó’ª~8Ù££€2J$03e77066-0a76-4727-a89a-45b66a0cb52c
