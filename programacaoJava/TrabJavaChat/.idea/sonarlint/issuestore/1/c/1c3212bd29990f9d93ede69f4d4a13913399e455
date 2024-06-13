@@ -1,0 +1,14 @@
+
+p
+java:S16046"(Make this anonymous inner class a lambda(“€Ëšÿÿÿÿÿ8Ò€Ùý€2J$e1432060-ef02-4da5-af3a-8291a4d65221
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÃîùÈ8Ò€Ùý€2J$4564ae0b-fb7d-46fc-b322-0684c2d1787c
+Ä
+java:S1598"€This file "MainGUI.java" should be located in "InterfacesGraficas" directory, not in "/home/hackteemo/Desktop/TrabJavaChat/src".(ÃîùÈ8Ó€Ùý€2J$f9603ea8-a40e-446c-b8d4-5ff7d325b723
+‘
+java:S3252"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(Õû»öþÿÿÿÿ8Û€Ùý€2J$f0da397f-e3f9-4953-a2a4-a3bf3c3eb40e
+„
+java:S1854H"ARemove this useless assignment to local variable "portaServidor".(ÄâµŠ8á€Ùý€2J$3e0237ec-4290-4204-aa90-2889326efd69
+u
+java:S1481F"2Remove this unused "portaServidor" local variable.(å©Ÿƒ8ã€Ùý€2J$bc83d238-66fc-4971-94d2-d5507be6953e
+|
+java:S1612{"9Replace this lambda with method reference 'MainGUI::new'.(µÇì¬8ñ€Ùý€2J$5cdda1f6-55ee-4cc8-9dc6-a4ef7f07fa60

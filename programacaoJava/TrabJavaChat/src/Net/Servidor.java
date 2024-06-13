@@ -1,73 +1,76 @@
 package Net;
 
-import java.io.IOException;
-import java.io.PrintStream;
-import java.net.InetAddress;
-import java.net.ServerSocket;
-import java.net.Socket;
+import java.io.*;
+import java.net.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
-public class Servidor {
-    private int port;
-    private List<PrintStream> clientOutputStreams;
+final public class Servidor implements BaseNet {
+    private static List<PrintStream> clientesConectados = new ArrayList<>();
 
-    public Servidor(int port) {
-        this.port = port;
-        clientOutputStreams = new ArrayList<>();
-        iniciar();
-    }
-
-    private void iniciar() {
-        try (ServerSocket serverSocket = new ServerSocket(port)) {
-            InetAddress addr = InetAddress.getByName("10.136.64.191");
-            System.out.println("Servidor multithread iniciado na porta: " + port);
+    @Override
+    public void iniciar(final String host, final int porta) {
+        try (ServerSocket serverSocket = new ServerSocket(porta)) {
+            System.out.printf("Servidor iniciado em %s:%d\n", host, porta);
 
             while (true) {
                 Socket clientSocket = serverSocket.accept();
-                System.out.println("Cliente conectado: " + clientSocket.getInetAddress().getHostAddress());
-
-                Scanner input = new Scanner(clientSocket.getInputStream());
-                String clientId = input.nextLine();
-
-                PrintStream clientOutput = new PrintStream(clientSocket.getOutputStream());
-                clientOutputStreams.add(clientOutput);
-
-                new Thread(() -> {
-                    try {
-                        Scanner inputClient = new Scanner(clientSocket.getInputStream());
-
-                        while (true) {
-                            if (inputClient.hasNextLine()) {
-                                String message = inputClient.nextLine();
-                                System.out.println("Cliente " + clientId + ": " + message);
-
-                                // Envia a mensagem para todos os clientes conectados
-                                for (PrintStream output : clientOutputStreams) {
-                                    output.println(clientId + ": " + message);
-                                }
-                            }
-                        }
-                    } catch (IOException e) {
-                        System.err.println("Erro na comunicação com o cliente " + clientId + ": " + e.getMessage());
-                    } finally {
-                        // Remove o fluxo de saída do cliente da lista
-                        clientOutputStreams.remove(clientOutput);
-                        try {
-                            clientSocket.close();
-                        } catch (IOException e) {
-                            System.err.println("Erro ao fechar a conexão com o cliente " + clientId + ": " + e.getMessage());
-                        }
-                    }
-                }).start();
+                System.out.printf("Novo cliente conectado: %s\n", clientSocket);
+                PrintStream outputStream = new PrintStream(clientSocket.getOutputStream(), true);
+                clientesConectados.add(outputStream);
+                Thread thread = new Thread(new TratarCliente(clientSocket, outputStream));
+                thread.start();
             }
         } catch (IOException e) {
-            System.err.println("Erro ao iniciar o servidor: " + e.getMessage());
+            System.err.printf("Erro ao iniciar o servidor: %s\n", e.getMessage());
+        }
+    }
+
+    @Override
+    public void iniciar() {
+        iniciar(BaseNet.getHostPadrao(), BaseNet.getPortaPadrao());
+    }
+
+    static class TratarCliente implements Runnable {
+        private Socket clientSocket;
+        private PrintStream outputStream;
+
+        public TratarCliente(Socket clientSocket, PrintStream outputStream) {
+            this.clientSocket = clientSocket;
+            this.outputStream = outputStream;
+        }
+
+        @Override
+        public void run() {
+            try (BufferedReader reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
+                String message;
+                while ((message = reader.readLine()) != null) {
+                    System.out.printf("Mensagem recebida: %s\n", message);
+                    broadcastMessage(message);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                clientesConectados.remove(outputStream);
+                try {
+                    clientSocket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public Servidor() {}
+
+    private static void broadcastMessage(String message) {
+        for (PrintStream clientOutput : clientesConectados) {
+            clientOutput.println(message);
         }
     }
 
     public static void main(String[] args) {
-        new Servidor(10000);
+        Servidor s = new Servidor();
+        s.iniciar();
     }
 }
